@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IP Info</title>
     <style>
         body {
@@ -9,11 +11,18 @@
             margin: 0;
             padding: 0;
         }
+
         h1 {
             text-align: center;
             margin-top: 20px;
             color: #333;
         }
+
+        .container {
+            margin: 0 auto;
+            max-width: 600px;
+        }
+
         #ipInfo {
             max-width: 400px;
             margin: 0 auto;
@@ -22,30 +31,36 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         p {
             margin: 10px 0;
         }
+
         a {
             text-decoration: none;
             color: #007BFF;
         }
+
         a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
-    <h1>IP Information</h1>
-    <div id="ipInfo">
-        <p>IP: <span id="ip"></span></p>
-        <p>City: <span id="city"></span></p>
-        <p>Region: <span id="region"></span></p>
-        <p>Country: <span id="country"></span></p>
-        <p>Location: <span id="loc"></span></p>
-        <p>Organization: <span id="org"></span></p>
-        <p>Postal Code: <span id="postal"></span></p>
-        <p>Timezone: <span id="timezone"></span></p>
-        <p>Readme: <a href="#" id="readme"></a></p>
+    <div id="container">
+        <h1>IP Information</h1>
+        <div id="ipInfo">
+            <p>IP: <span id="ip"></span></p>
+            <p>City: <span id="city"></span></p>
+            <p>Region: <span id="region"></span></p>
+            <p>Country: <span id="country"></span></p>
+            <p>Location: <span id="loc"></span></p>
+            <p>Organization: <span id="org"></span></p>
+            <p>Postal Code: <span id="postal"></span></p>
+            <p>Timezone: <span id="timezone"></span></p>
+            <p>Readme: <a href="#" id="readme"></a></p>
+        </div>
     </div>
 
     <script>
@@ -79,4 +94,5 @@
         fetchIPInfo();
     </script>
 </body>
+
 </html>
