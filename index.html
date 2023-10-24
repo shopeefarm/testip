@@ -2,6 +2,37 @@
 <html>
 <head>
     <title>IP Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+        #ipInfo {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>IP Information</h1>
@@ -33,8 +64,9 @@
                     document.getElementById('org').textContent = data.org;
                     document.getElementById('postal').textContent = data.postal;
                     document.getElementById('timezone').textContent = data.timezone;
-                    document.getElementById('readme').textContent = 'Readme';
-                    document.getElementById('readme').href = data.readme;
+                    const readmeLink = document.getElementById('readme');
+                    readmeLink.textContent = 'Readme';
+                    readmeLink.href = data.readme;
                 } else {
                     console.error('Failed to fetch IP information.');
                 }
